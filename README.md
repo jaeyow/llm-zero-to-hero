@@ -233,6 +233,17 @@ Because we had our evals set up, we were able to quickly iterate on the prompts 
 
 We can continue to iterate on the prompts and improve the system, but this is a great start.
 
+### **F1 Score Improvement Table**
+
+| Iteration       | Description                                                                                     | F1 Score (%) |
+|------------------|-------------------------------------------------------------------------------------------------|--------------|
+| **Baseline**    | Initial evaluation before any prompt or system changes.                                         | **86.79%**    |
+| **Iteration #1**| Improved system prompt clarity to provide more specific and factual responses.                  | **90.91%**    |
+| **Iteration #2**| Removed chunking and passed the entire document to the LLM for better context understanding.    | **92.86%**    |
+| **Iteration #3**| Updated Gold Set for accuracy and added few-shot examples to include qualifiers in answers.     | **94.74%**    |
+
+**Summary**: Through prompt iteration and system adjustments, the F1 score improved significantly from **86.79%** to **94.74%**.
+
 2. **Model Fine-Tuning**:
     - Use annotated data to fine-tune the model or adjust hyperparameters for better performance.
 

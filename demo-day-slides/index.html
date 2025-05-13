@@ -19,9 +19,9 @@
 				<section>
 					<h3>Vibing our way through Evals</h3>
 					<p>7 Steps to Effective LLM Evaluations</p>
-					<p>
-						<small>Created by <a href="https://www.linkedin.com/in/joreyes">Jose 'JO' Reyes</a></small>
-					</p>
+					<small>Created by <a href="https://www.linkedin.com/in/joreyes">Jose 'JO' Reyes</a></small>
+					<p><small>My learnings from the course</small></p>
+					<p><small>Building LLM Applications for Data Scientists and Software Engineers</small></p>
 				</section>
 				<section>	
 					<section>
@@ -35,6 +35,18 @@
 						<img class="r-frame" style="background: rgba(255,255,255,0.1);" data-src="./assets/rag-on-modal.png" alt="Down arrow">
 					</section>
 				</section>
+				<section>
+					<section>
+						<h2>Why we need evals</h2>
+						<p>
+							Traditional software vs Generative AI software
+						</p>
+					</section>
+					<section>
+						<p>Traditional software vs Generative AI software</p>
+						<img class="r-frame" style="background: rgba(255,255,255,0.1);" data-src="./assets/genai-vs-traditional.png" alt="Down arrow">
+					</section>
+				</section>				
 				<section>
 					<section>
 						<h3>Step 1: Generate Synthetic Data using LLM</h3>
@@ -90,6 +102,14 @@
 				</section>
 				<section>
 					<section>
+						<h3>So far...</h3>
+						<div style="text-align: left;">
+							<p>Step 1: Generate Synthetic Data using LLM</p>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h3>Step 2: Generate our GOLD SET using LLM (EXPECTED ANSWERS)</h3>
 						<p>- From each of the questions in Step 1, generate answers for all 6 sample resumes</p>
 						<p>- Used Gemini 1.5 Flash</p>
@@ -129,11 +149,40 @@
 				</section>
 				<section>
 					<section>
+						<h3>So far...</h3>
+						<div style="text-align: left;">
+							<p>Step 1: Generate Synthetic Data using LLM</p>
+							<p>Step 2: Generate our GOLD SET using LLM (EXPECTED ANSWERS)</p>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h3>Step 3: Run predictions against our RAG algorithm (ACTUAL ANSWERS)</h3>
 						<p>- From each of the questions in Step 1, for each of the 6 resumes</p>
 						<p>- Pass each question to our RAG</p>
 						<p>- Get the generated answer from our RAG</p>
 						<p>- This process generates Actual 60 question-answer pairs output from our RAG system</p>
+						<p>- Our system is now ready for error analysis</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>So far...</h3>
+						<div style="text-align: left;">
+							<p>Step 1: Generate Synthetic Data using LLM</p>
+							<p>Step 2: Generate our GOLD SET using LLM (EXPECTED ANSWERS)</p>
+							<p>Step 3: Run predictions against our RAG algorithm (ACTUAL ANSWERS)</p>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
 					</section>
 				</section>
 				<section>
@@ -143,6 +192,10 @@
 						<p>- We use Gemini 1.5 Flash and Instructor</p>
 						<p>- We will annotate these output later</p>
 						<p>- The Eval output is not easy to digest (JSON) so we have vibe coded tools</p>
+					</section>
+					<section>
+						<p>AI Eval Loop</p>
+						<img class="r-frame" style="background: rgba(255,255,255,0.1);" data-src="./assets/eval-loop.png" alt="Down arrow">
 					</section>
 					<section>
 						<h3 data-id="code-title">Our Eval Prompt</h3>
@@ -201,7 +254,23 @@
 				</section>
 				<section>
 					<section>
+						<h3>So far...</h3>
+						<div style="text-align: left;">
+							<p>Step 1: Generate Synthetic Data using LLM</p>
+							<p>Step 2: Generate our GOLD SET using LLM (EXPECTED ANSWERS)</p>
+							<p>Step 3: Run predictions against our RAG algorithm (ACTUAL ANSWERS)</p>
+							<p>Step 4: Run Evals using our LLM Judge (Expected vs Actual)</p>
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h3>Step 5: Vibe-coded Annotation tool</h3>
+						<p>- Normally we would bring out Excel or Google sheets to do good ol' error analysis using pivot tables</p>
+						<p>- To find the system's failure modes, but we have a better toolset now</p>
 						<p>- Ask domain expert to annotate the predictions</p>
 						<p>- Fill with detailed critique regardless of PASS or FAIL</p>
 						<p>- These critiques will be used later for iterating out RAG prompts</p>
@@ -209,6 +278,20 @@
 					</section>
 					<section>
 						<img class="r-frame" style="background: rgba(255,255,255,0.1);" data-src="./assets/annotator-on-modal.png" alt="Down arrow">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>So far...</h3>
+						<div style="text-align: left;">
+							<p>Step 1: Generate Synthetic Data using LLM</p>
+							<p>Step 2: Generate our GOLD SET using LLM (EXPECTED ANSWERS)</p>
+							<p>Step 3: Run predictions against our RAG algorithm (ACTUAL ANSWERS)</p>
+							<p>Step 4: Run Evals using our LLM Judge (Expected vs Actual)</p>
+							<p>Step 5: Vibe-coded Annotation tool</p>
+							<p></p>
+							<p></p>
+						</div>
 					</section>
 				</section>
 				<section>
@@ -225,6 +308,21 @@
 				</section>
 				<section>
 					<section>
+						<h3>So far...</h3>
+						<div style="text-align: left;">
+							<p>Step 1: Generate Synthetic Data using LLM</p>
+							<p>Step 2: Generate our GOLD SET using LLM (EXPECTED ANSWERS)</p>
+							<p>Step 3: Run predictions against our RAG algorithm (ACTUAL ANSWERS)</p>
+							<p>Step 4: Run Evals using our LLM Judge (Expected vs Actual)</p>
+							<p>Step 5: Vibe-coded Annotation tool</p>
+							<p>Step 6: Vibe-coded Error Analysis Report</p>
+							<p></p>
+						</div>
+						</section>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h3>Step 7: Vibe-coded Evaluation Report </h3>
 						<p>- Another JSON data viewer vibe coded with same toolset</p>
 						<p>- Shows the calculated metrics that we're interested in - eg. F1 metric</p>
@@ -237,8 +335,29 @@
 				</section>
 				<section>
 					<section>
+						<h3>So far...</h3>
+						<div style="text-align: left;">
+							<p>Step 1: Generate Synthetic Data using LLM</p>
+							<p>Step 2: Generate our GOLD SET using LLM (EXPECTED ANSWERS)</p>
+							<p>Step 3: Run predictions against our RAG algorithm (ACTUAL ANSWERS)</p>
+							<p>Step 4: Run Evals using our LLM Judge (Expected vs Actual)</p>
+							<p>Step 5: Vibe-coded Annotation tool</p>
+							<p>Step 6: Vibe-coded Error Analysis Report</p>
+							<p>Step 7: Vibe-coded Evaluation Report</p>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Improvements, prompt iterations starts now...</h3>
+					</section>
+					<section>
+						<img class="r-frame" style="background: rgba(255,255,255,0.1);" data-src="./assets/iteration-results.png" alt="Down arrow">
+					</section>
+				</section>
+				<section>
+					<section>
 						<h2>THE END</h2>
-						<p>Now we can start prompt iteration!</p>
 						<small>Github: <a href="https://github.com/jaeyow/llm-zero-to-hero">https://github.com/jaeyow/llm-zero-to-hero</a></small>
 						<p></p>
 					</section>
